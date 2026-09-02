@@ -37,7 +37,7 @@ data class MainUiState(
 
 enum class Screen { Setup, Folder, Credentials, Home, Recover }
 
-class MainViewModel(
+class MainViewModel @JvmOverloads constructor(
     application: Application,
     private val repo: RelayRepository = RelayRepository(application, OkHttpClient()),
     private val fileManager: FileManager = FileManager(application)
